@@ -11,8 +11,14 @@ const Home: React.FC = () => {
   const handelSave = () => {
     axios
       .post("http://localhost:3000/create-users", { name, job, image })
-      .then((result) => console.log(result))
-      .catch((err) => console.log(err));
+      .then((result) => {
+        console.log(result);
+        alert("User saved successfully");
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("failed to save user");
+      });
   };
 
   return (
