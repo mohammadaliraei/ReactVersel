@@ -8,7 +8,7 @@ const userModel = require("./models/users");
 
 app.use(
   cors({
-    origin: ["https://react-versel-frontend.vercel.app/"],
+    origin: ["https://react-versel-frontend.vercel.app"],
     methods: ["POST", "GET"],
     Credential: true,
   })
