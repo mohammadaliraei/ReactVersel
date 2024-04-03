@@ -8,7 +8,7 @@ const Dashboard: React.FC = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/")
+      .get("https://react-versel-api.vercel.app/")
       .then((result) => setUsers(result.data))
       .catch((err) => console.log(err));
   }, []);

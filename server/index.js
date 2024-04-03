@@ -4,13 +4,15 @@ const cors = require("cors");
 const app = express();
 const userModel = require("./models/users");
 
-// app.use(
-//   cors({
-//     origin: [""],
-//     methods: ["POST", "GET"],
-//     Credential: true,
-//   })
-// );
+// app.use(cors());
+
+app.use(
+  cors({
+    origin: ["https://react-versel-api.vercel.app/"],
+    methods: ["POST", "GET"],
+    Credential: true,
+  })
+);
 app.use(express.json());
 
 const uri =

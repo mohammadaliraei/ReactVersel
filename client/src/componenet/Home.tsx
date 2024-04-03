@@ -10,7 +10,11 @@ const Home: React.FC = () => {
 
   const handelSave = () => {
     axios
-      .post("http://localhost:3000/create-users", { name, job, image })
+      .post("https://react-versel-api.vercel.app/create-users", {
+        name,
+        job,
+        image,
+      })
       .then((result) => {
         console.log(result);
         alert("User saved successfully");
